@@ -5,7 +5,7 @@
 
 theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "de-AT"
@@ -19,10 +19,11 @@ repository               : "freefallcid/dominicreich.com-jekyll"
 teaser                   : "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : true # true, false (default)
+breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "staticman_v2"
+  # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -37,7 +38,7 @@ comments:
     issue_term           : # "pathname" (default)
 staticman:
   allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
+  branch                 : "master"
   commitMessage          : # "New comment by {fields.name}"
   filename               : # comment-{@timestamp}
   format                 : # "yml"
@@ -51,10 +52,12 @@ staticman:
       type               : # "date"
       options:
         format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
+  endpoint               : "https://dev.staticman.net/v3/entry/github/"
+  # URL of your own deployment with trailing slash, will fallback to the public instance
 reCaptcha:
   siteKey                : "6Le-fz4UAAAAAO0Cp2XT0eTlwIqlNUBn1mPg9DXU"
-  secret                 : "6Le-fz4UAAAAAK7FOeDfnbA2HEc5BYXU2JfIzAGJ"
+  #secret                 : "6Le-fz4UAAAAAK7FOeDfnbA2HEc5BYXU2JfIzAGJ"
+  secret                 : "XesI12jsaXJk4pIh5f3OYyhmUEUTQfH3BvAbBmAa24WAtZzEquFX4yqyH253xtociy6DirStIcWiZs/2iwSLdoVfqjLWvWZOPwSWFWKfZltfNJbPThmojl1NaBdWUdQR4EeUylyR81DDn8OlnwLy7r7G9CYcbmpxsNaBMNiuP4M="
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
@@ -69,9 +72,9 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification : "LpFEVwchKca51YPZMItHOcBbF24SNtOLq45GX8ERj7w"
-bing_site_verification   :
-yandex_site_verification :
+google_site_verification : "30eecSm8sH2itoI-l-N20wVDSk0Uw4Kg_NNuUC_mVBU"
+bing_site_verification   : "4BEB54F647AEE7CE18D0A77137236FCB"
+yandex_site_verification : "d661d507bace53f0"
 naver_site_verification  :
 
 # Social Sharing
@@ -88,13 +91,14 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - https://github.com/freefallcid
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : google # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : "GTM-THWKCZV"
+    anonymize_ip         : true # true, false (default)
 
 
 # Site Author
@@ -187,7 +191,10 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 # Conversion
 markdown: kramdown
 highlighter: rouge
-lsi: false
+strict_front_matter: true
+lsi: true
+future: false
+show_drafts: false
 excerpt_separator: "\n\n"
 incremental: false
 
@@ -199,9 +206,10 @@ kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..6
+  toc_levels: 1..3
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  footnote_backlink: "⤴"
 
 
 # Sass/SCSS
@@ -274,6 +282,36 @@ compress_html:
     envs: development
 
 
+# Plugin: Table of Contents (jekyll-toc)
+toc:
+  min_level: 2
+  max_level: 2
+  list_class: "toc__menu"
+  item_class: "toc__entry"
+  item_prefix: "toc__"
+
+# Plugin: Jekyll Algolia
+algolia:
+  application_id: RM5UBNYOIM
+  index_name: dominicreich
+  search_only_api_key: 76f79ffe28e10e3d95fbf8503a08f846
+  nodes_to_index: "p,blockquote"
+  files_to_exclude:
+    - index.html
+    - index.md
+    - _pages/404.md
+    - _pages/articles.md
+    - _pages/faqs.md
+    - _pages/mastering-paper.md
+    - _pages/howto.md
+    - _pages/portraits.md
+    - _pages/sitemap.md
+    - _pages/tag.md
+    - _pages/til.md
+    - _pages/work.md
+    - _pages/recipes.md
+
+
 # Defaults
 defaults:
   # _posts
@@ -287,3 +325,10 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

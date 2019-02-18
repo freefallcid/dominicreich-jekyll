@@ -1,13 +1,24 @@
-search                   : false # true, false (default)
-search_full_content      : false # true, false (default)
-analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          : ""
+# Site wide configuration
+
+url                      : ""
+host                     : "0.0.0.0"
+
+profile                  : true
+future                   : true
+show_drafts              : true
+
+google_site_verification : ""
+bing_site_verification   : ""
+alexa_site_verification  : ""
+yandex_site_verification : ""
+
+google_ad-client         : ""
+google_ad-slot           : ""
+google_analytics         : ""
 
 reCaptcha:
-  siteKey                :
-  secret                 :
+  siteKey: ""
+  secret: ""
 
 #minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 #minimal_mistakes_skin    : "air"
