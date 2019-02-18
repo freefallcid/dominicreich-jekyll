@@ -1,0 +1,16 @@
+# main links
+main:
+  - title: "Start"
+    url: /
+  # - title: "Archiv"
+  #   url: /archiv/
+  # - title: "Howtos"
+  #   url: /howtos/
+  # - title: "Tags"
+  #   url: /tags/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+  # - title: "Über mich"
+  #   url: /ueber-mich/
+  # - title: "Impressum"
+  #   url: /impressum/
