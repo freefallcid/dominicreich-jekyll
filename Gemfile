@@ -1,8 +1,9 @@
 source "https://rubygems.org"
 
 gem "jekyll"
-#gem "minimal-mistakes-jekyll"
-gem "minimal-mistakes-jekyll", :github => "mmistakes/minimal-mistakes" # bleeding edge version
+# gem "minimal-mistakes-jekyll"
+# gem "minimal-mistakes-jekyll", :github => "mmistakes/minimal-mistakes" # bleeding edge version
+gem "minimal-mistakes-jekyll", :git => "https://github.com/mmistakes/minimal-mistakes.git" # bleeding edge version
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
