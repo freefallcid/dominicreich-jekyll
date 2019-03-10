@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /
+#permalink: /
 title: "Insanity On Stage"
 header:
   overlay_color: "#5e616c"
