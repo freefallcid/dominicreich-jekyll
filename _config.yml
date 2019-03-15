@@ -55,9 +55,8 @@ staticman:
   endpoint: "https://dev.staticman.net/v3/entry/github/"
   # URL of your own deployment with trailing slash, will fallback to the public instance
 reCaptcha:
-  siteKey: "6Le-fz4UAAAAAO0Cp2XT0eTlwIqlNUBn1mPg9DXU"
-  #secret: "6Le-fz4UAAAAAK7FOeDfnbA2HEc5BYXU2JfIzAGJ"
-  secret: "XesI12jsaXJk4pIh5f3OYyhmUEUTQfH3BvAbBmAa24WAtZzEquFX4yqyH253xtociy6DirStIcWiZs/2iwSLdoVfqjLWvWZOPwSWFWKfZltfNJbPThmojl1NaBdWUdQR4EeUylyR81DDn8OlnwLy7r7G9CYcbmpxsNaBMNiuP4M="
+  siteKey: "6LfJvJcUAAAAAMDDZo-ZPz5wzzQizbZxYUb-jl77"
+  secret: "RdgZ+HOKHkh9HAq4DF5NOf9aYG4Y36OFnoPlPyuHIN7O3kxgIfi/ssr98EFShn+jBEOQDfZW1zK+htBfYlJ5eZconJO6p7ZtLNFBaKTvC2myA2heN7yFFUrLTmBLj/eF85fKeLGQkcs7K2i0y3IdcCwqniC2a6EHTz8yrvOubes="
 atom_feed:
   path: # blank (default) uses feed.xml
 search: true # true, false (default)
@@ -99,7 +98,6 @@ analytics:
   google:
     tracking_id: "GTM-THWKCZV"
     anonymize_ip: true # true, false (default)
-
 
 # Site Author
 author:
